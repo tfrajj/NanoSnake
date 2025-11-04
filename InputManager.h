@@ -11,6 +11,7 @@ public:
   // Простий дебаунс і блокування зворотного ходу робиться в GameCore.
   static Dir readDirection();
   static bool anyButtonPressed();
+  static bool isPause();
 };
 
 #endif // INPUT_MANAGER_H

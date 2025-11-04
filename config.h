@@ -26,6 +26,8 @@
 #define PIN_LEFT  3
 #define PIN_RIGHT 5
 
+#define PIN_PAUSE 6
+
 // Обчислені значення
 #define FIELD_WIDTH  (DISPLAY_WIDTH / CELL_SIZE)
 #define FIELD_HEIGHT (DISPLAY_HEIGHT / CELL_SIZE)

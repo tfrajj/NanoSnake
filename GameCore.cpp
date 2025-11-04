@@ -1,3 +1,4 @@
+#include "HardwareSerial.h"
 #include "GameCore.h"
 #include "DisplayManager.h"
 #include "Renderer.h"
@@ -13,6 +14,8 @@ static InputManager::Dir nextDir = InputManager::DIR_RIGHT;
 static InputManager::Dir tmpDir = InputManager::DIR_RIGHT;
 static unsigned long lastStepMs = 0;
 static uint16_t score = 0;
+static bool isPause = false;
+static bool toCheckPause = true;
 
 void GameCore::begin() {
   // посів випадковості
@@ -184,6 +187,18 @@ void GameCore::update() {
   }
 
   if (state == GameState::STATE_PLAYING) {
+    // Process pause button. >>
+    bool pausePressed = InputManager::isPause();
+
+    if (toCheckPause && pausePressed) {
+      isPause = !isPause;
+      toCheckPause = false;
+    }
+
+    if (!pausePressed) { toCheckPause = true; }
+    if (isPause) { return; }
+    // << Process pause button.
+
     InputManager::Dir d = InputManager::readDirection();
     if (d != InputManager::DIR_NONE) {
       tmpDir = d;
