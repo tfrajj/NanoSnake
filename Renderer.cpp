@@ -52,7 +52,6 @@ void Renderer::drawSplash() {
 }
 
 void Renderer::drawGameOver() {
-  DisplayManager::fillScreen(COLOR_BG);
-  DisplayManager::drawTextCenter("GAME OVER", 1);
+  DisplayManager::drawTextCenter("GAME OVER", 2);
 }
 
