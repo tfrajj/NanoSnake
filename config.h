@@ -18,7 +18,7 @@
 #define CELL_SIZE 8
 
 // Частота оновлення руху змійки (мс, можна змінити)
-#define GAME_SPEED_DELAY 500
+#define GAME_SPEED_DELAY 250
 
 // Кнопки (по твоїм значенням)
 #define PIN_UP    4
