@@ -27,7 +27,8 @@ void DisplayManager::drawTextCenter(const char* text, uint8_t size) {
 }
 
 void DisplayManager::fillRectPx(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color) {
-  tft.fillRect(x, y, w, h, color);
+  // tft.fillRect(x, y, w, h, color);
+  tft.fillRoundRect(x, y, w, h, 2, color);
 }
 
 void DisplayManager::fillScreen(uint16_t color) {

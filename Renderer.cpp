@@ -19,7 +19,9 @@ void Renderer::drawCell(const Point &p, uint16_t color) {
 }
 
 void Renderer::clearCell(const Point &p) {
-  drawCell(p, COLOR_BG);
+  int16_t x = cellToPxX(p.x);
+  int16_t y = cellToPxY(p.y);
+  DisplayManager::fillRectPx(x, y, CELL_SIZE, CELL_SIZE, COLOR_BG);
 }
 
 void Renderer::drawSplash() {

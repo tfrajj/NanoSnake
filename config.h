@@ -32,9 +32,9 @@
 #define MAX_SNAKE_LENGTH (FIELD_WIDTH * FIELD_HEIGHT)
 
 // Кольори (16-bit) https://rgbcolorpicker.com/565
-#define COLOR_BG    0x0000  // чорний
-#define COLOR_CELL  0x07E0  // зелений
-#define COLOR_FOOD  0xe082  // червоний
-#define COLOR_TEXT  0xFFFF  // білий
+#define COLOR_BG    0x0000
+#define COLOR_CELL  0x0c88
+#define COLOR_FOOD  0xff00
+#define COLOR_TEXT  0xd154
 
 #endif // CONFIG_H
